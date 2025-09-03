@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Таргетолог Daulet - Запуск рекламы в Instagram, Facebook, TikTok</title>
+  <meta name="description" content="Профессиональный таргетолог. Настройка и ведение рекламы в соцсетях. Привлекаю клиентов и увеличиваю продажи для вашего бизнеса.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --accent: #3b82f6;
+      --accent-contrast: #ffffff;
+      --card: #f1f5f9;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+      --shadow-hover: 0 10px 30px rgba(15, 23, 42, 0.1);
+      --container: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', system-ui, sans-serif; scroll-behavior: smooth; line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+    .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 999px; background: var(--accent); color: var(--accent-contrast); font-weight: 600; transition: all 0.3s ease; box-shadow: var(--shadow); border: none; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); background: #2563eb; }
+    .btn.secondary { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+    .btn.secondary:hover { background: rgba(59, 130, 246, 0.05); }
+    .section { padding: 80px 0; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    h1, h2, h3 { line-height: 1.2; margin-top: 0; }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); letter-spacing: -0.01em; }
+    .text-lead { font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--muted); max-width: 56ch; }
+    header { position: sticky; top: 0; z-index: 100; backdrop-filter: saturate(1.2) blur(10px); background: rgba(255,255,255,0.92); border-bottom: 1px solid var(--line); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.02em; font-size: 1.1rem; }
+    .logo-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+    .menu { display: flex; gap: 28px; align-items: center; }
+    .menu a { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
+    .menu a:hover { color: var(--accent); }
+    .hero { padding: 100px 0 60px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 0.8rem; color: var(--muted); margin-bottom: 1rem; background: var(--card); }
+    .hero-cta { margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .portrait { aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-hover); }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; }
+    .stats { display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-value { font-size: 2rem; font-weight: 700; color: var(--accent); }
+    .stat-label { font-size: 0.9rem; color: var(--muted); }
+    .cards-grid, .cases-grid { display: grid; gap: 24px; }
+    .cards-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .cases-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); transition: all 0.3s ease; height: 100%; }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .card-icon { font-size: 2rem; margin-bottom: 16px; color: var(--accent); }
+    .case-card img { border-radius: var(--radius) var(--radius) 0 0; margin: -30px -30px 20px -30px; width: calc(100% + 60px); }
+    .case-tag { display: inline-block; padding: 4px 12px; background: var(--accent); color: white; border-radius: 999px; font-size: 0.75rem; margin-bottom: 12px; }
+    .review-card { position: relative; }
+    .review-card::before { content: '"'; font-size: 4rem; color: var(--line); position: absolute; top: -10px; left: 10px; line-height: 1; opacity: 0.5; }
+    .review-author { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; }
+    .cta-section { background: var(--accent); color: white; text-align: center; border: none; }
+    .cta-section .text-lead { color: rgba(255,255,255,0.9); }
+    .cta-section .btn { background: white; color: var(--accent); }
+    .cta-section .btn:hover { background: #f8fafc; }
+    footer { padding: 60px 0 40px; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
+    .social-links { display: flex; gap: 16px; }
+    .social-links a { color: var(--muted); }
+    .social-links a:hover { color: var(--accent); }
+    .fine { font-size: 0.85rem; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--fg); }
+    @media (max-width: 968px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-cta { justify-content: center; }
+      .stats { justify-content: center; text-align: center; }
+      .menu { display: none; position: fixed; flex-direction: column; background: var(--bg); top: 70px; left: 0; right: 0; padding: 20px; border-top: 1px solid var(--line); gap: 0; }
+      .menu.active { display: flex; }
+      .menu a { padding: 15px 0; width: 100%; text-align: center; border-bottom: 1px solid var(--line); }
+      .menu a:last-child { border-bottom: none; }
+      .mobile-menu-btn { display: block; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 20px; }
+      .social-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">
+          <span class="logo-mark">D</span>
+          <span>Daulet - Таргетолог</span>
+        </a>
+        <div class="menu" id="mainMenu">
+          <a href="#about">Обо мне</a>
+          <a href="#services">Услуги</a>
+          <a href="#cases">Кейсы</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contacts">Контакты</a>
+          <a class="btn" href="https://wa.me/77773660028?text=Здравствуйте! Заинтересованы в настройке рекламы" target="_blank" rel="noopener">Обсудить проект</a>
+        </div>
+        <button class="mobile-menu-btn" id="menuToggle">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Таргетинг: Instagram - Facebook - TikTok</span>
+          <h1>Увеличиваю продажи и привлекаю клиентов через рекламу в соцсетях</h1>
+          <p class="text-lead">Создаю и запускаю рекламные кампании, которые приносят прибыль. Работаю с малым и средним бизнесом. Фокус на результат, аналитику и окупаемость.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contacts">Заказать консультацию</a>
+            <a class="btn secondary" href="#cases">Смотреть кейсы</a>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-value">+85%</span>
+              <span class="stat-label">К продажам</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">-60%</span>
+              <span class="stat-label">Стоимость лида</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">50+</span>
+              <span class="stat-label">Проектов</span>
+            </div>
+          </div>
+        </div>
+        <div class="portrait">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" alt="Таргетолог Daulet">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Почему со мной работают</h2>
+          <p class="text-lead">Подхожу к проектам системно и нацелен на долгосрочный результат</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Глубокая аналитика</h3>
+            <p>Не просто запускаю рекламу, а настраиваю сквозную аналитику. Считаю ROMI, LTV и другие ключевые метрики вашего бизнеса.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Точный таргетинг</h3>
+            <p>Ищу и нахожу вашу целевую аудиторию там, где конкуренты её не видят. Использую связки интересов и Lookalike-аудитории.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">✍️</div>
+            <h3>Проработанные креативы</h3>
+            <p>Тексты и визуал, которые цепляют внимание и конвертируют. A/B тестирование для поиска идеального сочетания.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🤝</div>
+            <h3>Прозрачность и отчетность</h3>
+            <p>Вы всегда видите статистику и результаты в режиме реального времени. Еженедельные отчеты с выводами и планами.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Мои услуги</h2>
+          <p class="text-lead">Комплексные решения для достижения ваших бизнес-целей</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Полное ведение рекламы</h3>
+            <p>От анализа ниши и создания креативов до запуска кампаний, оптимизации и полной отчетности. Идеально для тех, кто хочет результат "под ключ".</p>
+            <p><strong>От 90 000 тг/мес</strong></p>
+          </div>
+          <div class="card">
+            <h3>Разовый запуск кампании</h3>
+            <p>Настройка и запуск одной рекламной кампании под конкретную задачу: запуск товара, акция, привлечение на мероприятие.</p>
+            <p><strong>От 50 000 тг</strong></p>
+          </div>
+          <div class="card">
+            <h3>Аудит рекламного кабинета</h3>
+            <p>Разбор вашей текущей рекламы:找出 ошибки, точки роста и составляю подробный план действий по улучшению показателей.</p>
+            <p><strong>30 000 тг</strong></p>
+          </div>
+          <div class="card">
+            <h3>Консультация</h3>
+            <p>60-минутный созвон, на котором отвечу на ваши вопросы по таргетингу и помогу со стратегией продвижения.</p>
+            <p><strong>15 000 тг</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Результаты в цифрах</h2>
+          <p class="text-lead">Реальные кейсы из моей практики</p>
+        </div>
+        <div class="cases-grid">
+          <div class="card case-card">
+            <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" alt="Кейс: Интернет-магазин косметики">
+            <span class="case-tag">E-commerce</span>
+            <h3>Интернет-магазин косметики</h3>
+            <p><strong>Задача:</strong> Увеличить онлайн-продажи в условиях растущей конкуренции.</p>
+            <p><strong>Результат за 3 месяца:</strong></p>
+            <ul>
+              <li>ROMI - 320%</li>
+              <li>Стоимость заказа - на 40% ниже рынка</li>
+              <li>+450 продаж с рекламы</li>
+            </ul>
+          </div>
+          <div class="card case-card">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" alt="Кейс: Стоматологическая клиника">
+            <span class="case-tag">Медицина</span>
+            <h3>Стоматологическая клиника</h3>
+            <p><strong>Задача:</strong> Привлечение пациентов на дорогостоящие услуги (имплантация, виниры).</p>
+            <p><strong>Результат за 2 месяца:</strong></p>
+            <ul>
+              <li>Цена лида - 1200 тг</li>
+              <li>23 заявки с рекламы</li>
+              <li>Оборот с клиентов - 2.8 млн тг</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Отзывы клиентов</h2>
+          <p class="text-lead">Что говорят те, кто уже увеличил продажи</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card review-card">
+            <p>"Работаем с Daulet уже полгода. Выстроили стабильный поток заявок с рекламы. Цена лида в 2 раза ниже, чем была у прошлого специалиста. Всегда на связи, предлагает решения, видит картину в целом. Рекомендую!"</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Алия" class="review-avatar">
+              <div>
+                <strong>Алия</strong>
+                <div class="fine">Владелец онлайн-магазина</div>
+              </div>
+            </div>
+          </div>
+          <div class="card review-card">
+            <p>"Заказали разовый запуск для продвижения мастер-класса. Получили в 3 раза больше регистраций, чем планировали! Daulet сам предложил несколько идей по креативам, которые сработали на ура. Обязательно вернусь."</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Арман" class="review-avatar">
+              <div>
+                <strong>Арман</strong>
+                <div class="fine">Организатор мероприятий</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section cta-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Готовы увеличить продажи?</h2>
+          <p class="text-lead">Обсудим вашу задачу и найдём лучшее решение. Напишите мне в удобный мессенджер.</p>
+          <div class="hero-cta">
+            <a class="btn" href="https://wa.me/77773660028?text=Здравствуйте! Хочу обсудить настройку рекламы" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn secondary" href="https://t.me/your_telegram" target="_blank" rel="noopener">Telegram</a>
+          </div>
+          <p class="fine">Отвечаю в течение 15 минут в рабочее время</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="fine">© <span id="y"></span> Daulet. Таргетолог. Все права защищены.</div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/your_profile/" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+          <a href="#" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const menuToggle = document.getElementById('menuToggle');
+    const mainMenu = document.getElementById('mainMenu');
+    if (menuToggle && mainMenu) {
+      menuToggle.addEventListener('click', function() {
+        mainMenu.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
